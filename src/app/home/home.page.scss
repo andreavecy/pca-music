@@ -1,6 +1,6 @@
 swiper-container {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
 }
 
 swiper-slide {
@@ -12,4 +12,20 @@ swiper-slide {
 
 .cool-title {
   color: red;
+}
+
+.custom-bg-color {
+  --background: aqua;
+}
+
+.sp-bg-color {
+  background-color: blueviolet;
+}
+
+//ion-avatar {
+//  --border-radius: 0px;
+//}
+
+.style-avatar {
+  --border-radius: 0px;
 }

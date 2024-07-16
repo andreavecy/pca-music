@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center ion-text-lowercase">INICIAR SESION</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <figure>
+    <img src="assets/images/profile.png"/>
+  </figure>
+  <form [formGroup]="loginForm" (ngSubmit)="(loginUser(loginForm.value))">
+    <ion-item>
+      <ion-input label="Email" labelPlacement="floating" placeholder="Correo electronico" formControlName="email"></ion-input>
+    </ion-item>
+    <ion-button
+    type="submit"
+    >
+      Login
+    </ion-button>
+  </form>
+
+</ion-content>

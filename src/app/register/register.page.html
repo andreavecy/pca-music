@@ -1,6 +1,9 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>register</ion-title>
+    <ion-buttons>
+      <ion-button (click)="goToLogin()"> <ion-icon name="arrow-back-outline"></ion-icon> </ion-button>
+      <ion-title class="ion-text-center">Registro</ion-title>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -8,7 +11,7 @@
   <figure>
     <img src="assets/images/profile.png"/>
   </figure>
-  <form [formGroup]="registerForm">
+  <form [formGroup]="registerForm" (ngSubmit)="register(registerForm.value)">
     <ion-item>
       <ion-input label="Nombre" placeholder="escriba su nombre" formControlName="name"></ion-input>
     </ion-item>
@@ -24,5 +27,14 @@
     <ion-item>
       <ion-input label="Contraseña" placeholder="escriba su contraseña" formControlName="password"></ion-input>
     </ion-item>
+    <ion-button
+    type="submit"
+    expand="block"
+    color="success"
+    shape="round"
+    [disabled]="!registerForm.valid"
+    >
+      Registrarse
+    </ion-button>
   </form>
 </ion-content>

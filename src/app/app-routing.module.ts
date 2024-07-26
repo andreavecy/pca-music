@@ -16,7 +16,7 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule), canActivate: [IntroGuard]
   },
   {
     path: 'register',
@@ -24,7 +24,11 @@ const routes: Routes = [
   },
   {
     path: 'menu',
-    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
+    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule), canActivate: [LoginGuard]
+  },
+  {
+    path: 'song-modal',
+    loadChildren: () => import('./song-modal/song-modal.module').then( m => m.SongModalPageModule)
   },
 ];
 

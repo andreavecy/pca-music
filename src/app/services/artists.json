@@ -1,0 +1,57 @@
+{
+    "artists": [
+      {
+          "id": 1,
+          "followers": 670,
+          "genres": [
+              "pop",
+              " electronica"
+          ],
+          "image": "https://cdns-images.dzcdn.net/images/cover/e6f35c6751d598c4fd4ac62f50e38f42/1900x1900-000000-80-0-0.jpg",
+          "name": "Dua Lipa",
+          "popularity": 90,
+          "created_at": "2024-07-24T15:47:22.324Z",
+          "updated_at": "2024-07-24T15:47:22.324Z"
+      },
+      {
+          "id": 2,
+          "followers": 120,
+          "genres": [
+              "pop",
+              " electronica"
+          ],
+          "image": "https://studiosol-a.akamaihd.net/uploadfile/letras/fotos/c/7/9/7/c7974361a3e99e988d0e72019b2b058f.jpg",
+          "name": "BZRP",
+          "popularity": 96,
+          "created_at": "2024-07-24T15:49:11.403Z",
+          "updated_at": "2024-07-24T15:49:11.403Z"
+      },
+      {
+          "id": 3,
+          "followers": 750,
+          "genres": [
+              "pop",
+              " reggueton"
+          ],
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnFdMJ6MoH0H2mjl84AJQzRZMXAL38TEZJ6A&s",
+          "name": "Shakira",
+          "popularity": 92,
+          "created_at": "2024-07-24T15:49:43.474Z",
+          "updated_at": "2024-07-24T15:49:43.474Z"
+      },
+      {
+          "id": 4,
+          "followers": 268,
+          "genres": [
+              "vallenato",
+              " pop",
+              " tropical"
+          ],
+          "image": "https://www.kienyke.com/sites/default/files/styles/interna_contenido_s/public/2023-05/Chat-gpt_0009_1.jpg?itok=zHpieu6o",
+          "name": "Carlos Vives",
+          "popularity": 88,
+          "created_at": "2024-07-24T15:50:20.792Z",
+          "updated_at": "2024-07-24T15:50:20.792Z"
+      }
+  ]
+  }

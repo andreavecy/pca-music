@@ -10,6 +10,13 @@ import { SongModalPage } from '../song-modal/song-modal.page';
 export class HomePage implements OnInit{
   artistsJson: any;
   artists: any;
+  song = {
+    name: '',
+    playing: false,
+    preview_url: ''
+  }
+  currentSong:any = {};
+  newTime:any;
   constructor(private musicService: MusicService, private modalController: ModalController) {}
 
   ngOnInit() {
@@ -38,7 +45,39 @@ export class HomePage implements OnInit{
         }
       }
     );
+    modal.onDidDismiss().then(dataReturned => {
+      this.song = dataReturned.data;
+    })
     modal.present();
+  }
+
+  play(){
+    this.currentSong = new Audio(this.song.preview_url);
+    this.currentSong.play();
+    this.currentSong.addEventListener("timeupdate", ()=>{
+      this.newTime = (1 / this.currentSong.duration) * this.currentSong.currentTime;
+    })
+    this.song.playing = true;
+  }
+  pause(){
+    this.currentSong.pause();
+    this.song.playing = false;
+  }
+
+  parseTime(time = "0.00"){
+    if (time) {
+      const partTime = parseInt(time.toString().split(".")[0], 10);
+      let minutes = Math.floor(partTime/60).toString();
+      if (minutes.length == 1){
+        minutes = "0" + minutes;
+      }
+      let seconds = (partTime % 60).toString();
+      if (seconds.length == 1){
+        seconds = "0" + seconds;
+      }
+      return minutes + ":" + seconds
+    }
+    return null
   }
   
 }
